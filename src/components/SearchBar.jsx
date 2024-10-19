@@ -16,7 +16,7 @@ const SearchBar = () => {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(
                 (position) => {
-                    const { latitude, longitude } = position.coords;
+                    const { latitude, longitude } = position.coords ;
                     dispatch(fetchWeatherByLocationData(latitude, longitude));
                 } ,
                 (error) => {
