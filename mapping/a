@@ -1,0 +1,14 @@
+/weather-app
+|-- /public
+|-- /src
+|   |-- /components
+|   |   |-- WeatherDisplay.js      // Component to display weather data
+|   |   |-- SearchBar.js           // Component for the city search bar
+|   |-- /redux
+|   |   |-- weatherSlice.js         // Slice for weather state management
+|   |   |-- store.js                // Redux store configuration
+|   |-- /utils
+|   |   |-- api.js                  // Function to call OpenWeatherMap API
+|   |-- App.js                      // Main app component
+|   |-- index.js                    // Entry point
+|-- package.json

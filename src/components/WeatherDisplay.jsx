@@ -4,7 +4,6 @@ import { useSelector } from 'react-redux';
 
 const WeatherDisplay = () => {
     const { data, loading, error } = useSelector((state) => state.weather);
-
     if (loading) {
         return (
             <div className="flex justify-center items-center h-screen">
@@ -12,7 +11,6 @@ const WeatherDisplay = () => {
             </div>
         );
     }
-
     if (error) {
         return (
             <div className="flex justify-center items-center h-screen">
@@ -20,7 +18,6 @@ const WeatherDisplay = () => {
             </div>
         );
     }
-
     if (!data) {
         return (
             <div className="flex justify-center items-center h-screen">

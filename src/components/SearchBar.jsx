@@ -1,8 +1,7 @@
 // src/components/SearchBar.js
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { fetchWeatherData, fetchWeatherByLocationData } from '../redux/weatherSlice';
-
+import { fetchWeatherData, fetchWeatherByLocationData } from '../redux/weatherActions';
 const SearchBar = () => {
     const [city, setCity] = useState('');
     const dispatch = useDispatch();

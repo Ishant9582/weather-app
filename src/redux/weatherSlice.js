@@ -1,6 +1,5 @@
 // src/redux/weatherSlice.js
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchWeatherByCity, fetchWeatherByLocation } from '../utils/api';
 
 const weatherSlice = createSlice({
     name: 'weather',
@@ -30,25 +29,5 @@ export const {
     fetchWeatherSuccess,
     fetchWeatherFailure,
 } = weatherSlice.actions;
-
-export const fetchWeatherData = (city) => async (dispatch) => {
-    dispatch(fetchWeatherStart());
-    try {
-        const data = await fetchWeatherByCity(city);
-        dispatch(fetchWeatherSuccess(data));
-    } catch (error) {
-        dispatch(fetchWeatherFailure(error.message));
-    }
-};
-
-export const fetchWeatherByLocationData = (lat, lon) => async (dispatch) => {
-    dispatch(fetchWeatherStart());
-    try {
-        const data = await fetchWeatherByLocation(lat, lon);
-        dispatch(fetchWeatherSuccess(data));
-    } catch (error) {
-        dispatch(fetchWeatherFailure(error.message));
-    }
-};
 
 export default weatherSlice.reducer;
