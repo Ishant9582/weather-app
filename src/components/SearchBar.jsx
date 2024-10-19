@@ -8,8 +8,8 @@ const SearchBar = () => {
 
     const handleSearch = () => {
         if (city) {
-            dispatch(fetchWeatherData(city));
-            setCity('');
+            dispatch(fetchWeatherData(city)) ;
+            setCity('') ;
         }
     };
     const handleCurrentLocation = () => {
@@ -18,7 +18,7 @@ const SearchBar = () => {
                 (position) => {
                     const { latitude, longitude } = position.coords;
                     dispatch(fetchWeatherByLocationData(latitude, longitude));
-                },
+                } ,
                 (error) => {
                     console.error('Error fetching location', error);
                 }
